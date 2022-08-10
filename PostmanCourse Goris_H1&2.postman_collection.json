@@ -1,0 +1,620 @@
+{
+	"info": {
+		"_postman_id": "bd95a159-d2a4-4c06-b0c3-0d70ec316e90",
+		"name": "PostmanCourse Goris_H1&2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18996990"
+	},
+	"item": [
+		{
+			"name": "Positive cases",
+			"item": [
+				{
+					"name": "Get Info",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/List",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"List"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Katerina\",\r\n    \"job\": \"QA Tester\",\r\n    \"age\": \"35\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/List",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"List"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put_Data update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"katett@yopmail.com\",\r\n    \"first_name\": \"Lusine\",\r\n    \"last_name\": \"Karapetyan\",\r\n    \"avatar\": \"https://reqres.in/img/faces/8-image.jpg\",\r\n    \"id\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/List/10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"List",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch_partial update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"katett@yopmail.com\",\r\n    \"first_name\": \"emanuel\",\r\n    \"last_name\": \"Badalyan\",\r\n    \"avatar\": \"https://reqres.in/img/faces/8-image.jpg\",\r\n    \"id\": 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/List/8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"List",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_data",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/List/10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"List",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Data Variable_CSV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"{{name}}\",\r\n    \"job\": \"{{job}}\",\r\n    \"age\": \"{{age}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/List",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"List"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Data Variable _JSON",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"first_name\": \"{{first_name}}\",\r\n    \"last_name\": \"{{last_name}}\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/List",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"List"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Environment Variables",
+			"item": [
+				{
+					"name": "Post Data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"First_name\": \"Hayarpi\",\r\n    \"Last_name\": \"Aghajanyan\",\r\n    \"job\": \"QA Tester\",\r\n    \"Email\": \"Hayarpi@yopmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{Env1}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{Env1}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Variable in prerequest test",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"id\", \"1\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{Env1}}/{{id}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{Env1}}",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pre/Test Scripts",
+			"item": [
+				{
+					"name": "Post Data_collection Var",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let responseJson = pm.response.json();\r",
+									"pm.collectionVariables.set(\"Email\",responseJson.Email)\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"First_name\": \"Narine\",\r\n    \"Last_name\": \"Badalyan\",\r\n    \"job\": \"QA Tester\",\r\n    \"Email\": \"{{Email}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/List",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"List"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Environment Var",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"First_name\": \"Lusine\",\r\n    \"Last_name\": \"Davtyab\",\r\n    \"job\": \"QA Tester\",\r\n    \"Email\": \"{{Email}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{test_env}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{test_env}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pre-request Script",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Lusine\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"id\", \"2\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{test_env}}/{{id}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{test_env}}",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Negative cases",
+			"item": [
+				{
+					"name": "Get Info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:300",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "300"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Katerina\",\r\n    \"job\": \"QA Tester\",\r\n    \"age\": \"35\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/Lis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Lis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post_Bad request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Katerina\",\r\n    \"j\": \"QA Tester\"\r\n    \"age\": \"35\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/List",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"List"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Email",
+			"value": "Katerina@yopmail.com"
+		}
+	]
+}

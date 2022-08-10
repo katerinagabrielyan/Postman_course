@@ -1,0 +1,43 @@
+{
+  "QA1": [
+    {
+      "First_name": "Katerina",
+      "Last_name": "Gabrielyan",
+      "job": "QA Tester",
+      "Email": "gkatherina@gmail.com",
+      "id": 1
+    },
+    {
+      "First_name": "Arshak",
+      "Last_name": "Hayryan",
+      "job": "QA Tester",
+      "Email": "arshak@yopmail.com",
+      "id": 2
+    }
+  ],
+  "QA2": [
+    {
+      "First_name": "Harut",
+      "Last_name": "Sargsyann",
+      "job": "QA Tester",
+      "Email": "Harut@yopmail.com",
+      "id": 1
+    },
+    {
+      "First_name": "Hayarpi",
+      "Last_name": "Aghajanyan",
+      "job": "QA Tester",
+      "Email": "Hayarpi@yopmail.com",
+      "id": 2
+    }
+  ],
+  "QA3": [
+    {
+      "First_name": "Arshak",
+      "Last_name": "Hayryan",
+      "job": "QA Tester",
+      "Email": "arshak@yopmail.com",
+      "id": 1
+    }
+  ]
+}
