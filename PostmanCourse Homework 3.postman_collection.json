@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "a4eef924-8fd5-4526-b322-a102965b39eb",
+		"name": "PostmanCourse Homework 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18996990"
+	},
+	"item": [
+		{
+			"name": "DB.json for tests",
+			"item": [
+				{
+					"name": "Get Info_testScripts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"let responseJson = pm.response.json();\r",
+									"console.log (responseJson);\r",
+									"\r",
+									"\r",
+									"pm.test (\"The keys are displayed\", () => {\r",
+									"     let keys = ['name','description','roles','actions'];\r",
+									"     pm.expect(responseJson).to.have.all.keys(keys);  \r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"pm.test (\"The value in response is equal to\", () => {\r",
+									"     pm.expect([responseJson.actions[0].isPrimary, \r",
+									"     responseJson.roles[0]]).to.be.eql([true, 'j7DAG8XKfD0C2yYt']);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test (\"The value in response is equal to\", () => {\r",
+									"     pm.expect(responseJson.actions[0].parameters[3].name).to.be.eql(\"DateType\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test (\"Check actions is an array\", () => {\r",
+									"    pm.expect(responseJson.actions).to.be.an(\"array\");\r",
+									"    pm.expect(responseJson.actions[0].dataSourceType.driver).to.be.eql(\"SnowFlake\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test (\"Check parameters is an array\", () => {\r",
+									"    pm.expect(responseJson.actions[0].parameters).to.be.an(\"array\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test (\"Check the object in the array\", () => {\r",
+									"    _.each(responseJson.actions[0].parameters, (Item)  => {\r",
+									"        pm.expect(Item).to.be.an ('object');\r",
+									"    })\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test (\"The value in response is equal to\", () => {\r",
+									"    pm.expect(responseJson.actions[0].parameters[0].description).to.be.eql(\"String value\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Check the values in the List\", () => {\r",
+									"    let name = [\"StringValue\", \"IntegerValue\", \"FloatType\", \"DateType\", \"ParameterForArrayCheck\"];\r",
+									"    for (var i=0; i<responseJson.actions[0].parameters.length; i++) \r",
+									"    {\r",
+									"    pm.expect(responseJson.actions[0].parameters[i].name).to.be.eql(name[i]);\r",
+									"    ;\r",
+									"\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.globals.get(\"URL\");\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/commandInfo/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"commandInfo",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"let responseJson = pm.response.json();",
+					"pm.collectionVariables.get(\"Email\");",
+					"console.log(pm.collectionVariables.get(\"Email\"));",
+					"console.log(pm.response.json().Email);"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Email",
+			"value": "Katerina@yopmail.com"
+		}
+	]
+}

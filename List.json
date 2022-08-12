@@ -1,0 +1,87 @@
+{
+  "List": [
+    {
+      "email": "katett@yopmail.com",
+      "first_name": "Narine",
+      "last_name": "Badalyan",
+      "avatar": "https://reqres.in/img/faces/8-image.jpg",
+      "id": 7
+    },
+    {
+      "First_name": "Hayarpi",
+      "Last_name": "Aghajanyan",
+      "job": "QA Tester",
+      "Email": "Hayarpi@yopmail.com",
+      "id": 8,
+      "email": "katett@yopmail.com",
+      "first_name": "emanuel",
+      "last_name": "Badalyan",
+      "avatar": "https://reqres.in/img/faces/8-image.jpg"
+    },
+    {
+      "First_name": "Narine",
+      "Last_name": "Badalyan",
+      "job": "QA Tester",
+      "Email": "Katerina@yopmail.com",
+      "id": 9
+    },
+    {
+      "name": "Katerina",
+      "job": "QA Tester",
+      "age": "35",
+      "id": 11
+    },
+    {
+      "name": "Katerina",
+      "job": "QA Tester",
+      "age": "35",
+      "id": 12
+    },
+    {
+      "name": "Margarita",
+      "job": "Psychologist",
+      "age": "19",
+      "id": 13
+    },
+    {
+      "name": "Harut",
+      "job": "engineer",
+      "age": "25",
+      "id": 14
+    },
+    {
+      "name": "Arshak",
+      "job": "engineer",
+      "age": "28",
+      "id": 15
+    },
+    {
+      "name": "{{name}}",
+      "job": "QA Tester",
+      "age": "{{age}}",
+      "id": 16
+    },
+    {
+      "name": "Katerina",
+      "job": "QA Tester",
+      "age": "35",
+      "id": 17
+    }
+  ],
+  "Prod1": [
+    {
+      "First_name": "Arshak",
+      "Last_name": "Hayryan",
+      "job": "QA Tester",
+      "Email": "Katerina@yopmail.com",
+      "id": 1
+    },
+    {
+      "First_name": "Lusine",
+      "Last_name": "Davtyab",
+      "job": "QA Tester",
+      "Email": "Katerina@yopmail.com",
+      "id": 2
+    }
+  ]
+}
